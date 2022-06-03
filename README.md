@@ -2,9 +2,10 @@
 
 If you noticed problems when installing SAP NW 7.52 trial using the regular approach on Vmware/Virtualbox/Docker, 
 try this one. It has fixes taken from various sources, 🍺 to the authors!
-<https://answers.sap.com/questions/13386863/i-updated-my-system-and-now-server-is-crahing.html>
-<https://blogs.sap.com/2021/06/07/adjusting-installer-script-for-sap-netweaver-dev-edition-for-distros-with-kernel-version-5.4-or-higher>
-<https://answers.sap.com/questions/13185432/docker-installation-of-as-abap-752-sp04-hangs.html>
+
+- <https://answers.sap.com/questions/13386863/i-updated-my-system-and-now-server-is-crahing.html>
+- <https://blogs.sap.com/2021/06/07/adjusting-installer-script-for-sap-netweaver-dev-edition-for-distros-with-kernel-version-5.4-or-higher>
+- <https://answers.sap.com/questions/13185432/docker-installation-of-as-abap-752-sp04-hangs.html>
 
 ## Installation
 
@@ -28,12 +29,14 @@ try this one. It has fixes taken from various sources, 🍺 to the authors!
 └── zinstall.sh
 ```
 
-Tested on Win10 machine with Docker Desktop and Rancher Desktop, both on WSL. 
+Tested on Win10 machine with Docker Desktop and Rancher Desktop, both with WSL integration. 
 
 Execute from the command line:
 
 ```bash
 wsl.exe -d docker-desktop sh -c "sysctl -w vm.max_map_count=1000000"
+# or
+wsl.exe -d rancher-desktop sh -c "sysctl -w vm.max_map_count=1000000"
 ```
 
 Build the image: 
