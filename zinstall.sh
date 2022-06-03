@@ -650,7 +650,7 @@ check_dependencies() {
 #----------------
 replace_dblicense() {
 #----------------
-    cp "$(find SYBASE_ASE_TestDrive/*.lic | head -n 1)" server/TAR/x86_64/SYBASE_ASE_TD.lic
+    cp "$(find License -name *.lic | head -n 1)" server/TAR/x86_64/SYBASE_ASE_TD.lic
 
     local db_dist_dir=${1}
     shift

@@ -17,8 +17,8 @@ try this one. It has fixes taken from various sources, 🍺 to the authors!
 ├── Dockerfile
 ├── README.md
 ├── sapinst
+│   ├── License
 │   ├── SAP_COMMUNITY_DEVELOPER_License
-│   ├── SYBASE_ASE_TestDrive
 │   ├── client
 │   ├── img
 │   ├── info.txt
