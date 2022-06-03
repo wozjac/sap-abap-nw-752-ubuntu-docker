@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN mkdir /run/uuuidd
+RUN mkdir /run/uuidd
 RUN apt-get -y update && apt-get -y install gcc perl csh libaio1 libc6 libstdc++6 iputils-ping uuid uuid-runtime
 
 COPY sapinst /tmp/sapinst
