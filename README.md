@@ -9,6 +9,8 @@ try this one. It has fixes taken from various sources, 🍺 to the authors!
 
 ## Installation
 
+Tested on Win10 machine with Docker Desktop and Rancher Desktop (dockerd runtime), both with WSL integration. 
+
 - clone this repository
 - download all files (license too) for NW 7.52 <https://developers.sap.com/trials-downloads.html?search=7.52>
 - extract all files into `sapinst` folder. So at the end you have:
@@ -29,7 +31,8 @@ try this one. It has fixes taken from various sources, 🍺 to the authors!
 └── zinstall.sh
 ```
 
-Tested on Win10 machine with Docker Desktop and Rancher Desktop, both with WSL integration. 
+*At the moment (03.06.2022) the downloaded license extracts to `License` folder; if it is different during your
+installation then rename it accordingly*
 
 Execute from the command line:
 
