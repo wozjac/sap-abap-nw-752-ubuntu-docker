@@ -42,7 +42,7 @@ wsl.exe -d docker-desktop sh -c "sysctl -w vm.max_map_count=1000000"
 wsl.exe -d rancher-desktop sh -c "sysctl -w vm.max_map_count=1000000"
 ```
 
-Check whether the disk size limit in the Docker configuration is setup to at least 120 Gb.
+Hint: for Docker - check whether the disk size limit in the Docker configuration is setup to at least 120 Gb.
 
 Build the image: 
 
@@ -102,7 +102,7 @@ su - npladm
 startsap ALL
 ```
 
-Exit the container by `exit` (twice). When you exit the container it automatically shutdown, so be sure to stop SAP before that.
+Exit the container by `exit` (twice). When you exit the container it is automatically shutdown, so be sure to stop SAP before that.
 
 ## Developer key
 
