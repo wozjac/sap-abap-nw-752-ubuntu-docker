@@ -42,6 +42,8 @@ wsl.exe -d docker-desktop sh -c "sysctl -w vm.max_map_count=1000000"
 wsl.exe -d rancher-desktop sh -c "sysctl -w vm.max_map_count=1000000"
 ```
 
+Check whether the disk size limit in the Docker configuration is setup to at least 120 Gb.
+
 Build the image: 
 
 ```bash
@@ -78,9 +80,14 @@ Now start the uuidd and you can logon to the instance using the standard DEVELOP
 root@vhcalnplci:/# /usr/sbin/uuidd
 ```
 
-Stopping the instance:
+Application server: "localhost"  
+Instance number: "00"  
+System ID: "NPL"  
+
+Stopping the instance (make sure to be in npladm, otherwise the terminal will not recognize 'stopsap' command):
 
 ```bash
+su - npladm
 stopsap ALL
 ```
 
@@ -95,7 +102,7 @@ su - npladm
 startsap ALL
 ```
 
-Exit the container by `exit` (twice).
+Exit the container by `exit` (twice). When you exit the container it automatically shutdown, so be sure to stop SAP before that.
 
 ## Developer key
 
